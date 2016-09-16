@@ -1,3 +1,5 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="DataBase.QueryManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -8,6 +10,7 @@
           
           <script src="./javascript/materialize.js"></script>
           <script src="./javascript/materialize.min.js"></script>
+           <script src="./javascript/index.js"></script>
           <link rel ="stylesheet" href="./css/materialize.css"/>
           <link rel ="stylesheet" href="./css/materialize.min.css"/>
           <link rel ="stylesheet" href="./css/test.css"/>
@@ -17,6 +20,7 @@
                $(".button-collapse").sideNav({
                  menuWidth: 200              
                });
+               choixOnglet();
             });
              
 
@@ -35,10 +39,10 @@
                         <li><a href="categoryEditor.html">Insertion dans la base en mode AJAX</a></li>
                         <li><a href="googlePieChartAjax.jsp">Un client AJAX JQuery + Visualisations Google</a></li>
                         <li><div class="divider"></div></li>-->
-                        <li><a href="./test/onglet1.jsp">Vision globale</a></li>
-                        <li><a href="./test/Produit.jsp">Produits</a></li>
-                        <li><a href="./test/Commande.jsp">Commandes</a></li>
-                        <li><a href="./test/Client.jsp">Clients</a></li>
+                        <li > <a id ="onglet1" >Vision globale</a></li>
+                        <li > <a id ="onglet2">Produits</a></li>
+                        <li > <a id ="onglet3">Commandes</a></li>
+                        <li > <a id ="onglet4">Clients</a></li>
                     </ul>
                 </li>
             </ul>
@@ -56,24 +60,10 @@
             </div>
            </nav>
         
-        
-        
-        
-        
- <!--  <ul id="slide-out" class="side-nav">
-   <li><div class="userView">
-      <img class="background" src="images/office.jpg">
-      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-      <a href="#!name"><span class="white-text name">John Doe</span></a>
-      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-    </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-  </ul>-->
+        <div id="corps"></div>
+       
+
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">Menu</i></a>
-        
+  
     </body>
 </html>
