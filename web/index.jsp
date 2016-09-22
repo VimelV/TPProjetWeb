@@ -25,12 +25,13 @@
                  menuWidth: 200              
                });
                choixOnglet();  
+               
             });
         </script>
     </head>
     <body>
         <div id="Menu"> 
-            <div id="slide-out" class="side-nav fixed perso" align="center" style="background-color: #4E4E4F;">     
+            <div id="slide-out" class="side-nav fixed grey darken-3" align="center" >     
                 <h2 style="color: white;">Hello</h2>
             <ul >
                <li><!--servlet Jdbc2json-->
