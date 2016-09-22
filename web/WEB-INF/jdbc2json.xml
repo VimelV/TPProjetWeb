@@ -27,5 +27,9 @@
 		INNER JOIN Produit  ON (Ligne.Produit = Produit.Reference)
 		GROUP BY Societe		
 	</QUERY>	
-                        
+        <QUERY name="Test">
+            Select Cl.CONTACT, C.NUMERO, P.Nom AS "Produit"
+            from client Cl, commande C, ligne L, produit P
+            where Cl.CODE = C.CLIENT AND C.NUMERO = L.COMMANDE AND L.PRODUIT = P.REFERENCE 
+        </QUERY>
 </JDBC2JSON>

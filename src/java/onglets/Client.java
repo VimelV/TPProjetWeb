@@ -5,6 +5,10 @@
  */
 package onglets;
 
+import DataBase.QueryManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 /**
  *
  * @author Vimel
@@ -21,10 +25,11 @@ public class Client {
     private String pays = null;
     private String telephone = null;
     private String fax = null;
-
+    private QueryManager q = null;
     
     // Constructeur pqr défaut   
     public Client() {
+        this.q = new QueryManager();
     }
     
      public Client(String pCode, String pSociete, String pContact, String pAdresse,
@@ -42,10 +47,26 @@ public class Client {
         this.pays = pPays;
         this.telephone = pTelephone;   
         this.fax = pFax;         
+        this.q = new QueryManager();
     }
     
-    
-    
+    //Requetes SQL
+    public String allCustomers(){    
+        String s="";
+        ResultSet rs = null;
+        try {     
+            rs  = this.q.executeQuery("select ville from client" );
+            while(rs.next()){      
+             s += rs.getString("ville") + "\n";
+            }
+        } catch (SQLException e) {
+            //Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return s;
+    }
+     
+     
+    // Getter and Setter
     public String getCode() {
         return code;
     }

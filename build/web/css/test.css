@@ -9,13 +9,15 @@ and open the template in the editor.
 */
 
 #enTete {
-  padding-left: 200px;    
-
+  padding-left: 200px; 
 }
 #corps {
-  padding-left: 200px;    
+  padding-left: 200px; 
+}
 
+#menu a{
+  color : white;
 }
 .nav-wrapper{
-    background-color: #5BA9A9;  
+   background-color: #5BA9A9;  
 }
