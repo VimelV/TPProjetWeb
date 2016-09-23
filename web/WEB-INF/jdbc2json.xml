@@ -35,4 +35,8 @@
         <QUERY name="ListeCategorie">
             SELECT code, libelle FROM categorie
         </QUERY>
+        <QUERY name="ProduitParCategorie">
+            SELECT * FROM produit, categorie 
+            WHERE categorie.code = produit.categorie and categorie.code = :code
+        </QUERY>    
 </JDBC2JSON>
