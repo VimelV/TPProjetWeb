@@ -7,7 +7,15 @@
         <QUERY name="TousLesClients">
 		SELECT * FROM Client
 	</QUERY>
-
+        
+        <QUERY name="ToutesLesCommandes">
+		SELECT * FROM Commande
+	</QUERY>
+        
+        <QUERY name="CommandesParPays">
+		SELECT PAYS_LIVRAISON, count(*) as "nbcommande" FROM Commande group by PAYS_LIVRAISON
+	</QUERY>
+        
         <QUERY name="ClientParCode">
 		SELECT * FROM Client WHERE code = :code
 	</QUERY>
