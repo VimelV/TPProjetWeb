@@ -22,7 +22,9 @@ and open the template in the editor.
 .nav-wrapper{
    background-color: #5BA9A9;  
 }
-
+.footer-copyright{
+    color : white;
+}
 i .small .material-icons {
 color : white;
 }    

@@ -36,25 +36,18 @@ function extraction(result){
     }
    return data;
 }
-    function drawChart(result) { //   alert(donnee);
-      array = extraction(result);
-     /*  var data = google.visualization.arrayToDataTable([
-           ["Element", "Density"],
-           
-        array
-      ]);*/
-         var formatter = new google.visualization.NumberFormat({prefix: '$'});
+    function drawChart(result) { 
+        array = extraction(result);
+        var formatter = new google.visualization.NumberFormat({suffix : ' $'});
         formatter.format(array, 1); // Apply formatter to second column
 
-  var view = new google.visualization.DataView(array);
-  view.setColumns([0, 1]);
+        var view = new google.visualization.DataView(array);
+        view.setColumns([0, 1]);
 
-  var table = new google.visualization.Table(document.getElementById('table_sort_div'));
-  table.draw(view, {width: '100%', height: '100%'});
+        var table = new google.visualization.Table(document.getElementById('table_sort_div'));
+        table.draw(view, {width: '100%', height: '100%'});
 
- /* var chart = new google.visualization.BarChart(document.getElementById('barchart_values'));
-  chart.draw(view);*/
-
-
+       /* var chart = new google.visualization.BarChart(document.getElementById('barchart_values'));
+        chart.draw(view);*/
  }
   </script>

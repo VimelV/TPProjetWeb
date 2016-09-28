@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -41,20 +40,18 @@
                         <li><a href="categoryEditor.html">Insertion dans la base en mode AJAX</a></li>
                         <li><a href="googlePieChartAjax.jsp">Un client AJAX JQuery + Visualisations Google</a></li>
                         <li><div class="divider"></div></li>-->
-                        <li > <a id ="onglet1" >Vision globale <i class="small material-icons">visibility</i></a></li>
+                        <li > <a id ="onglet1" >Vision globale<i class="small material-icons">visibility</i></a></li>
                         <li><div class="divider"></div></li>
-                        <li > <a id ="onglet2">Produits <i class="small material-icons">shopping_cart</i></a> </li>
+                        <li > <a id ="onglet2">Produits<i class="small material-icons">shopping_cart</i></a> </li>
                         <li><div class="divider"></div></li>
-                        <li > <a id ="onglet3">Commandes <i class="small material-icons">assignment</i></a></li>
+                        <li > <a id ="onglet3">Commandes<i class="small material-icons">assignment</i></a></li> 
                         <li><div class="divider"></div></li>
-                        <li > <a id ="onglet4">Clients <i class="small material-icons">person_pin</i></a></li>
+                        <li > <a id ="onglet4">Clients<i class="small material-icons">person_pin</i> </a></li>
                     </ul>
                 </li>
             </ul>
             <div class="footer-copyright" style="margin-top: 200%">
-            <div class="container">
-            © 2016 Copyright 
-            </div>
+                <div class="container">© 2016 Copyright</div>
           </div>
         </div>
         </div>
