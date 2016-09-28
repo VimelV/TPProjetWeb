@@ -17,7 +17,12 @@ and open the template in the editor.
 
 #menu a{
   color : white;
+  cursor: pointer;
 }
 .nav-wrapper{
    background-color: #5BA9A9;  
 }
+
+i .small .material-icons {
+color : white;
+}    

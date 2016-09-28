@@ -8,12 +8,12 @@
           
           <script src="./javascript/materialize.js"></script>
           <script src="./javascript/materialize.min.js"></script>
-           <script src="./javascript/index.js"></script>
-           <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
-           <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-          
-           <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+          <script src="./javascript/index.js"></script>
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <script type="text/javascript" src="https://www.google.com/jsapi"></script>
          
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
           <link rel ="stylesheet" href="./css/materialize.css"/>
           <link rel ="stylesheet" href="./css/materialize.min.css"/>
           <link rel ="stylesheet" href="./css/test.css"/>
@@ -24,13 +24,13 @@
                $(".button-collapse").sideNav({
                  menuWidth: 200              
                });
-               choixOnglet();  
+               choixOnglet();               
             });
         </script>
     </head>
     <body>
         <div id="Menu"> 
-            <div id="slide-out" class="side-nav fixed perso" align="center" style="background-color: #4E4E4F;">     
+            <div id="slide-out" class="side-nav fixed grey darken-3" align="center" >     
                 <h2 style="color: white;">Hello</h2>
             <ul >
                <li><!--servlet Jdbc2json-->
@@ -41,22 +41,27 @@
                         <li><a href="categoryEditor.html">Insertion dans la base en mode AJAX</a></li>
                         <li><a href="googlePieChartAjax.jsp">Un client AJAX JQuery + Visualisations Google</a></li>
                         <li><div class="divider"></div></li>-->
-                        <li > <a id ="onglet1" >Vision globale</a></li>
+                        <li > <a id ="onglet1" >Vision globale <i class="small material-icons">visibility</i></a></li>
                         <li><div class="divider"></div></li>
-                        <li > <a id ="onglet2">Produits</a></li>
+                        <li > <a id ="onglet2">Produits <i class="small material-icons">shopping_cart</i></a> </li>
                         <li><div class="divider"></div></li>
-                        <li > <a id ="onglet3">Commandes</a></li>
+                        <li > <a id ="onglet3">Commandes <i class="small material-icons">assignment</i></a></li>
                         <li><div class="divider"></div></li>
-                        <li > <a id ="onglet4">Clients</a></li>
+                        <li > <a id ="onglet4">Clients <i class="small material-icons">person_pin</i></a></li>
                     </ul>
                 </li>
             </ul>
+            <div class="footer-copyright" style="margin-top: 200%">
+            <div class="container">
+            © 2016 Copyright 
+            </div>
+          </div>
         </div>
         </div>
       
            <nav>
             <div id="enTete"class="nav-wrapper fixed">
-                <a href="#" class="brand-logo center">Tableau de bord</a>
+                <a class="brand-logo center">Tableau de bord</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                   <li><a href="#">Sass</a></li>
                   <li><a href="#">Components</a></li>
@@ -69,6 +74,6 @@
        
 
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">Menu</i></a>
-  
+ 
     </body>
 </html>

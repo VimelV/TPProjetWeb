@@ -32,4 +32,11 @@
             from client Cl, commande C, ligne L, produit P
             where Cl.CODE = C.CLIENT AND C.NUMERO = L.COMMANDE AND L.PRODUIT = P.REFERENCE 
         </QUERY>
+        <QUERY name="ListeCategorie">
+            SELECT code, libelle FROM categorie
+        </QUERY>
+        <QUERY name="ProduitParCategorie">
+            SELECT * FROM produit, categorie 
+            WHERE categorie.code = produit.categorie and categorie.code = :code
+        </QUERY>    
 </JDBC2JSON>
