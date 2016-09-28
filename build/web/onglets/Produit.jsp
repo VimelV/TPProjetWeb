@@ -16,13 +16,10 @@
             </form>
            <div id="table_sort_div" ></div>
         </div>
-       
-        
-        
         
         
         <script type="text/javascript">
-             $(document).ready(function(){
+            $(document).ready(function(){
                 showResults();
                 choixListeCat();
             });
@@ -35,7 +32,7 @@
                         creationListeCat)
                 .fail( // Quoi faire en cas d'erreur
                     function(XMLHttpRequest, textStatus, errorThrown) {
-                        alert("error: " + textStatus);
+                        alert("error 2: " + textStatus);
                     }
                 );
             }
@@ -58,7 +55,7 @@
             }
             
             function creerTable(result){ 
-                    //alert(result);
+                   // alert(result);
                     addCode(result);                   
                
             }
@@ -81,21 +78,35 @@
             data.addColumn('string', 'Quantité par unité');
             data.addColumn('number', 'Prix unitaire');
             data.addColumn('number', 'Unité en stock');
+            
+            data.addColumn('number', 'Stock minimal');
+            data.addColumn('number', 'Critique stock');
+            data.addColumn('number', 'Unité commandé');
+            
            
             for (var prop in result) {
-                tabTemp = [result[prop][1], result[prop][4], result[prop][5], result[prop][6]];
+                tabTemp = [result[prop][0], result[prop][1], result[prop][2], result[prop][3],result[prop][6], result[prop][4], result[prop][5]];
                 data.addRow(tabTemp);  
-                //alert(tabTemp);
             }
            
             var formatter = new google.visualization.NumberFormat({suffix : ' $'});
             formatter.format(data, 2); // Apply formatter to third column
+            
+            var formate = new google.visualization.NumberFormat({ negativeColor: 'red', negativeParens: false});
+            formate.format(data, 4); // Apply formatter to second column
 
             var view = new google.visualization.DataView(data);
-            view.setColumns([0,1,2,3]);
+            view.setColumns([0,1,2,3,4,5,6]);
 
             var table = new google.visualization.Table(document.getElementById('table_sort_div'));
-            table.draw(view, {width: '100%', height: '100%'});
+            table.draw(view, {allowHtml: true,width: '100%', height: '100%'});
+            
+        $(".google-visualization-table-table tbody tr").each(function() {
+                    console.log($(this).children("td")[4]);
+        var te = $(this).children("td")[3];
+        var tt = $(this).children("td")[4];
+        //console.log(te +"  "+tt);
+             });
         }
         </script>
             

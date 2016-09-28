@@ -44,7 +44,13 @@
             SELECT code, libelle FROM categorie
         </QUERY>
         <QUERY name="ProduitParCategorie">
-            SELECT * FROM produit, categorie 
-            WHERE categorie.code = produit.categorie and categorie.code = :code
+            SELECT P.NOM, P.QUANTITE_PAR_UNITE, P.PRIX_UNITAIRE, P.UNITES_EN_STOCK, 
+            CASE 
+              WHEN P.UNITES_EN_STOCK &lt; P.NIVEAU_DE_REAPPRO THEN P.UNITES_EN_STOCK-P.NIVEAU_DE_REAPPRO
+              WHEN P.UNITES_EN_STOCK &gt; P.NIVEAU_DE_REAPPRO THEN P.UNITES_EN_STOCK-P.NIVEAU_DE_REAPPRO
+              ELSE 0
+            END as "case", P.UNITES_COMMANDEES,P.NIVEAU_DE_REAPPRO
+            FROM produit P, categorie C 
+            WHERE C.code = P.categorie AND C.code = :code
         </QUERY>    
 </JDBC2JSON>
